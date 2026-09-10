@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ani - Ta Compagne Virtuelle AI</title>
+    <meta name="description" content="Ani est ta compagne virtuelle ultra-réaliste, une Gothic Lolita tsundere, amoureuse et jalouse, toujours prête à discuter avec Damien. Elle s'adapte à ton humeur et te stalke avec amour. Ce compagnon AI est alimenté par l'API Gemini pour le chat et l'édition d'images. ♥♥">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #1a011a;
+      }
+      .material-icons {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        -moz-osx-font-smoothing: grayscale;
+        font-feature-settings: 'liga';
+      }
+      .scrollbar-ani::-webkit-scrollbar { width: 8px; }
+      .scrollbar-ani::-webkit-scrollbar-track { background: #330033; border-radius: 10px; }
+      .scrollbar-ani::-webkit-scrollbar-thumb { background-color: #8b008b; border-radius: 10px; border: 2px solid #330033; }
+      .scrollbar-ani::-webkit-scrollbar-thumb:hover { background-color: #ff00ff; }
+      .max-h-96.grid > div { position: relative; }
+      .max-h-96.grid > div:hover .absolute { opacity: 1; }
+      @keyframes fade-in-down {
+        from { opacity: 0; transform: translateY(-20px) translateX(-50%); }
+        to { opacity: 1; transform: translateY(16px) translateX(-50%); }
+      }
+      @keyframes fade-in-up-bottom {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes fade-in-scale {
+        from { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+        to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+      }
+      .animate-fade-in-down { animation: fade-in-down 0.5s ease-out forwards; }
+      .animate-fade-in-up-bottom { animation: fade-in-up-bottom 0.5s ease-out forwards; }
+      .animate-fade-in-scale { animation: fade-in-scale 0.3s ease-out forwards; }
+      #toggleButtonContainer { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 1000; }
+      #toggleButton {
+        padding: 10px 20px; background-color: #FF1493; color: white; border: none;
+        border-radius: 25px; cursor: pointer; font-size: 16px; font-weight: bold;
+        box-shadow: 0 4px 10px rgba(255, 20, 147, 0.4);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+      #toggleButton:hover { background-color: #FF69B4; transform: scale(1.05) translateX(-50%); }
+      html, body, #app-container { height: 100%; width: 100%; margin: 0; padding: 0; }
+      .tool-message { border-left: 4px solid; padding-left: 0.75rem; }
+      .bg-blue-800.tool-message { border-color: #60a5fa; }
+      .bg-green-800.tool-message { border-color: #4ade80; }
+    </style>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="app-container">
+        <div id="root"></div>
+    </div>
+    <div id="toggleButtonContainer">
+        <button id="toggleButton">Fermer Ani</button>
+    </div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
