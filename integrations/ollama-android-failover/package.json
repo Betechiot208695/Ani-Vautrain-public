@@ -1,0 +1,17 @@
+{
+  "name": "ani-ollama-android-failover",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Standalone Node.js gateway with PC/Android Ollama failover for Ani Vautrain",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
